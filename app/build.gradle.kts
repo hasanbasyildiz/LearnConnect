@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.hasanbasyildiz.learnconnect"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.hasanbasyildiz.learnconnect"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -48,6 +48,6 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
     // navigation component
-    implementation ("androidx.navigation:navigation-fragment-ktx:2.8.4")
-    implementation ("androidx.navigation:navigation-ui-ktx:2.8.4")
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.2.1")
+    implementation ("androidx.navigation:navigation-ui-ktx:2.2.1")
 }

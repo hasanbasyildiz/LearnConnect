@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mainPageFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/main_page_icon"
+        android:title="Ana sayfa" />
+    <item
+        android:id="@+id/myCoursesFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/my_courses_icon"
+        android:title="Kurslarım" />
+    <item
+        android:id="@+id/wishlistFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/wishlist_icon"
+        android:title="wishlist" />
+    <item
+        android:id="@+id/profilFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/profile_icon"
+        android:title="Profile" />
+</menu>
