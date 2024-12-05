@@ -10,6 +10,8 @@
     <string name="login_btn_txt">Giriş Yap</string>
     <string name="login_no_account_txt">Hesabınız yok mu? <font color="#FFB715">Kayıt Ol</font></string>
     <string name="register_page_sub_title">Kayıt olmak için bilgileriniz girin</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>
