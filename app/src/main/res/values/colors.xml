@@ -2,4 +2,22 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+
+
+    //renkler (colors) main color
+    <color name="primaryColor">#FFB715</color>
+    <color name="primaryBlack">#121212</color>
+    <color name="secondaryBlack">#272727</color>
+    <color name="tertiaryBlack">#3C3C3C</color>
+    <color name="primaryWhite">#EDEAEA</color>
+    <color name="secondaryWhite">#A0A0A0</color>
+    <color name="tertiaryWhite">#7D7D7D</color>
+
+
+
+
+
+
 </resources>

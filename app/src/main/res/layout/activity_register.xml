@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:id="@+id/register_title"
+        style="@style/all_page_title_txt_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Learn Connect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/register_sub_title"
+        style="@style/all_page_info_txt_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/register_page_sub_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_title" />
+
+    <EditText
+        android:id="@+id/register_name"
+        style="@style/edittext_Background_style"
+        android:layout_width="333dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="Adınız"
+        android:inputType="text"
+        android:paddingTop="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_sub_title" />
+
+
+    <EditText
+        android:id="@+id/register_surname"
+        style="@style/edittext_Background_style"
+        android:layout_width="333dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="Soyadınız"
+        android:inputType="text"
+        android:paddingTop="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_name" />
+
+    <EditText
+        android:id="@+id/register_mail"
+        style="@style/edittext_Background_style"
+        android:layout_width="333dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="Mail Adersiniz"
+        android:inputType="text"
+        android:paddingTop="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_surname" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_password"
+        android:layout_width="333dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        app:hintEnabled="false"
+        app:hintTextColor="@color/primaryColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_mail"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#7D7D7D">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/register_password_et"
+            style="@style/edittext_Background_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Şifre"
+            android:inputType="textPassword"
+            android:maxLength="9"
+            android:paddingTop="15dp"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_password_confirm"
+        android:layout_width="333dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        app:hintEnabled="false"
+        app:hintTextColor="@color/primaryColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_password"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#7D7D7D">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/register_password_et_confirm"
+            style="@style/edittext_Background_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Şifre tekrarı"
+            android:inputType="textPassword"
+            android:maxLength="9"
+            android:paddingTop="15dp"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/register_signin_btn"
+        style="@style/main_Btn_Style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Kayit Ol "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_password_confirm" />
+</androidx.constraintlayout.widget.ConstraintLayout>
