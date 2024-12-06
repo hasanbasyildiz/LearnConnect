@@ -13,9 +13,7 @@ import com.hasanbasyildiz.learnconnect.databinding.FragmentProfilBinding
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 
 class ProfilFragment : Fragment() {
-    private lateinit var binding:FragmentProfilBinding
-
-
+    private lateinit var binding: FragmentProfilBinding
 
 
     override fun onCreateView(
@@ -23,7 +21,9 @@ class ProfilFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentProfilBinding.inflate(inflater,container,false)
+        binding = FragmentProfilBinding.inflate(inflater, container, false)
+
+        //  binding.toolbar.title="Profile"
 
 
         return binding.root

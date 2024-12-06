@@ -125,7 +125,7 @@
 
     <Button
         android:id="@+id/register_signin_btn"
-        style="@style/main_Btn_Style"
+        style="@style/MyButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"

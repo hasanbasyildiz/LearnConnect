@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import com.hasanbasyildiz.learnconnect.R
 import com.hasanbasyildiz.learnconnect.databinding.FragmentFavoritesBinding
 import com.hasanbasyildiz.learnconnect.databinding.FragmentMainPageBinding
@@ -17,7 +18,7 @@ class MainPageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentMainPageBinding.inflate(inflater,container,false)
+        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_main_page,container,false)
 
 
         return binding.root
