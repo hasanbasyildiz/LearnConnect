@@ -8,6 +8,11 @@
         android:icon="@drawable/main_page_icon"
         android:title="Ana sayfa" />
     <item
+        android:id="@+id/searchFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Arama" />
+    <item
         android:id="@+id/myCoursesFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

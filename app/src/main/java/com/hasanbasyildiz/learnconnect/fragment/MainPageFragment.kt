@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.hasanbasyildiz.learnconnect.R
-import com.hasanbasyildiz.learnconnect.databinding.FragmentFavoritesBinding
 import com.hasanbasyildiz.learnconnect.databinding.FragmentMainPageBinding
 
 
