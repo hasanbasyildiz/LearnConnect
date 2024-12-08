@@ -6,57 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".denemeActivity2">
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:id="@+id/coordinatorLayout3"
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/player_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        app:show_buffering="when_playing"
+        app:use_controller="true"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" >
 
-        <!-- NestedScrollingChild goes here (NestedScrollView, RecyclerView, etc.). -->
-        <androidx.core.widget.NestedScrollView
-            android:id="@+id/nestedScrollView"
-            android:layout_width="match_parent"
 
-            android:layout_height="match_parent"
-            app:layout_behavior="@string/searchbar_scrolling_view_behavior">
-            <!-- Screen content goes here. -->
-        </androidx.core.widget.NestedScrollView>
+    </androidx.media3.ui.PlayerView>
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-
-            android:layout_height="wrap_content">
-
-            <com.google.android.material.search.SearchBar
-                android:id="@+id/search_bar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </com.google.android.material.appbar.AppBarLayout>
-
-        <com.google.android.material.search.SearchView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_anchor="@id/search_bar"
-
-            >
-
-            <!-- Search suggestions/results go here (ScrollView, RecyclerView, etc.). -->
-
-        </com.google.android.material.search.SearchView>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-    <!-- TextView -->
-    <TextView
-        android:id="@+id/textView"
+    <Button
+        android:id="@+id/buttonindirme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/coordinatorLayout3" /> <!-- İlk başta görünmez -->
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

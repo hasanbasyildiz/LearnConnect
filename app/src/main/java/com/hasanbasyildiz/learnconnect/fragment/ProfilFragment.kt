@@ -36,12 +36,13 @@ class ProfilFragment : Fragment() {
         // SharedPreferences üzerinden kullanıcı bilgilerini al
         val sharedPreferences = requireActivity().getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
 
-        val name = sharedPreferences.getString("name", "Ad Soyad")
+        val name = sharedPreferences.getString("name", "Ad ")
+        val surname = sharedPreferences.getString("surname", "Soyad")
         val email = sharedPreferences.getString("email", "Email")
         val phone = sharedPreferences.getString("phone", "Telefon Numarası")
 
         // Alınan bilgileri arayüzde göster
-        binding.profileNameTxt.text = name
+        binding.profileNameTxt.text = "$name $surname"
         binding.profileMailTxt.text = email
         binding.profilePhoneTxt.text = phone
     }

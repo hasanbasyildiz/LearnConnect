@@ -1,0 +1,74 @@
+{
+  
+
+  "hits": [
+    {
+      "id": 183107,
+      "pageURL": "https://pixabay.com/videos/id-183107/",
+      "type": "animation",
+      "tags": "artificial intelligence, technology, robot",
+      "duration": 17,
+      "title": "Robot Teknolojisi ve Yapay Zeka",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 5974842,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/10/01/183107-870151708_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 215751,
+      "pageURL": "https://pixabay.com/videos/id-215751/",
+      "type": "film",
+      "tags": "man, office work, business",
+      "duration": 18,
+      "title": "Ofiste Çalışan Adam",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+          "width": 1920,
+          "height": 1080,
+          "size": 3329059,
+          "thumbnail": "https://cdn.pixabay.com/video/2024/06/07/215751_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 174086,
+      "pageURL": "https://pixabay.com/videos/id-174086/",
+      "type": "animation",
+      "tags": "robot, artificial intelligence, technology",
+      "duration": 15,
+      "title": "Yapay Zeka ve Robot İnovasyonu",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 4353480,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/08/01/174086-850404739_medium.jpg"
+        }
+      }
+    },
+    {  "id": 203986,
+        "pageURL": "https://pixabay.com/videos/id-203986/",
+        "type": "animation",
+        "tags": "artificial intelligence, technology, digital",
+        "duration": 6,
+        "title": "Yapay Zeka ve Dijital Teknoloji Animasyonu",
+        "videos": {
+          "medium": {
+            "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 4562080,
+            "thumbnail": "https://cdn.pixabay.com/video/2024/03/12/203986-923133871_large.jpg"
+        }
+      }
+    }
+    
+  ]
+}

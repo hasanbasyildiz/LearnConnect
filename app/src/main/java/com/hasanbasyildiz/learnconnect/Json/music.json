@@ -1,0 +1,91 @@
+{
+  "total": 1446,
+  "totalHits": 500,
+  "hits": [
+    {
+      "id": 124983,
+      "pageURL": "https://pixabay.com/videos/id-124983/",
+      "type": "animation",
+      "tags": "tunnel, stars, light",
+      "duration": 20,
+      "title": "Yıldız Tüneli Işık Geçidi",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 7264096,
+          "thumbnail": "https://cdn.pixabay.com/video/2022/07/21/124983-732319296_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 202004,
+      "pageURL": "https://pixabay.com/videos/id-202004/",
+      "type": "animation",
+      "tags": "ai generated, restaurant, cafe",
+      "duration": 32,
+      "title": "Yapay Zeka Destekli Kafe Deneyimi",
+      "videos": {
+        "medium": {
+            "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
+                     "width": 1280,
+                     "height": 720,
+                     "size": 3795921,
+                     "thumbnail": "https://cdn.pixabay.com/video/2024/02/26/202004-916894674_tiny.jpg"
+        }
+      }
+    },
+    {
+      "id": 128215,
+      "pageURL": "https://pixabay.com/videos/id-128215/",
+      "type": "animation",
+      "tags": "tunnel, stars, light",
+      "duration": 20,
+      "title": "Işık Tüneli ve Yıldız Geçidi",
+      "videos": {
+        "medium": {
+            "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+                      "width": 1280,
+                      "height": 720,
+                      "size": 7228591,
+                      "thumbnail": "https://cdn.pixabay.com/video/2022/08/17/128215-740854706_tiny.jpg"
+        }
+      }
+    },
+    {
+      "id": 150865,
+      "pageURL": "https://pixabay.com/videos/id-150865/",
+      "type": "animation",
+      "tags": "tunnel, stars, light",
+      "duration": 30,
+      "title": "Uzun Yıldız Tüneli",
+      "videos": {
+        "medium": {
+            "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+                      "width": 1920,
+                      "height": 1080,
+                      "size": 21359058,
+                      "thumbnail": "https://cdn.pixabay.com/video/2023/02/15/150865-799327571_small.jpg"
+        }
+      }
+    },
+    {
+      "id": 120302,
+      "pageURL": "https://pixabay.com/videos/id-120302/",
+      "type": "animation",
+      "tags": "animated subscribe button, button overlay, button green screen",
+      "duration": 6,
+      "title": "Animasyonlu Abone Ol Düğmesi",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 265417,
+          "thumbnail": "https://cdn.pixabay.com/video/2022/06/14/120302-720505018_medium.jpg"
+        }
+      }
+    }
+  ]
+}

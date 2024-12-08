@@ -1,0 +1,327 @@
+{
+  "hits": [
+    {
+      "id": 120302,
+      "pageURL": "https://pixabay.com/videos/id-120302/",
+      "type": "animation",
+      "tags": "animated subscribe button, button overlay, button green screen",
+      "duration": 6,
+      "title": "Animasyonlu Abone Ol Düğmesi",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 265417,
+          "thumbnail": "https://cdn.pixabay.com/video/2022/06/14/120302-720505018_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 150865,
+      "pageURL": "https://pixabay.com/videos/id-150865/",
+      "type": "animation",
+      "tags": "tunnel, stars, light",
+      "duration": 30,
+      "title": "Uzun Yıldız Tüneli",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+          "width": 1920,
+          "height": 1080,
+          "size": 21359058,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/02/15/150865-799327571_small.jpg"
+        }
+      }
+    },
+    {
+      "id": 202004,
+      "pageURL": "https://pixabay.com/videos/id-202004/",
+      "type": "animation",
+      "tags": "ai generated, restaurant, cafe",
+      "duration": 32,
+      "title": "Yapay Zeka Destekli Kafe Deneyimi",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 3795921,
+          "thumbnail": "https://cdn.pixabay.com/video/2024/02/26/202004-916894674_tiny.jpg"
+        }
+      }
+    },
+    {
+      "id": 124983,
+      "pageURL": "https://pixabay.com/videos/id-124983/",
+      "type": "animation",
+      "tags": "tunnel, stars, light",
+      "duration": 20,
+      "title": "Yıldız Tüneli Işık Geçidi",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 7264096,
+          "thumbnail": "https://cdn.pixabay.com/video/2022/07/21/124983-732319296_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 215500,
+      "pageURL": "https://pixabay.com/videos/id-215500/",
+      "type": "animation",
+      "tags": "artificial intelligence, robot, technology",
+      "duration": 15,
+      "title": "Fütüristik Yapay Zeka Robotu",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 2495745,
+          "thumbnail": "https://cdn.pixabay.com/video/2024/06/06/215500_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 215751,
+      "pageURL": "https://pixabay.com/videos/id-215751/",
+      "type": "film",
+      "tags": "man, office work, business",
+      "duration": 18,
+      "title": "Ofiste Çalışan Adam",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+          "width": 1920,
+          "height": 1080,
+          "size": 3329059,
+          "thumbnail": "https://cdn.pixabay.com/video/2024/06/07/215751_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 128215,
+      "pageURL": "https://pixabay.com/videos/id-128215/",
+      "type": "animation",
+      "tags": "tunnel, stars, light",
+      "duration": 20,
+      "title": "Işık Tüneli ve Yıldız Geçidi",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 7228591,
+          "thumbnail": "https://cdn.pixabay.com/video/2022/08/17/128215-740854706_tiny.jpg"
+        }
+      }
+    },
+    {
+      "id": 159049,
+      "pageURL": "https://pixabay.com/videos/id-159049/",
+      "type": "animation",
+      "tags": "brain, nervous, sci fi",
+      "duration": 20,
+      "title": "Bilim Kurgu Beyin Sinirleri",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 7231351,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/04/15/159049-818026306_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 183107,
+      "pageURL": "https://pixabay.com/videos/id-183107/",
+      "type": "animation",
+      "tags": "artificial intelligence, technology, robot",
+      "duration": 17,
+      "title": "Gelişmiş Robot ve Yapay Zeka",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 5974842,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/10/01/183107-870151708_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 204292,
+      "pageURL": "https://pixabay.com/videos/id-204292/",
+      "type": "animation",
+      "tags": "investment, finance, business",
+      "duration": 15,
+      "title": "Finansal Yatırım Animasyonu",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+          "width": 1920,
+          "height": 1080,
+          "size": 8543778,
+          "thumbnail": "https://cdn.pixabay.com/video/2024/03/15/204292-923909617_small.jpg"
+        }
+      }
+    },
+    {
+      "id": 131993,
+      "pageURL": "https://pixabay.com/videos/id-131993/",
+      "type": "film",
+      "tags": "to write, to study, task",
+      "duration": 23,
+      "title": "Öğrenci veya Profesyonel İçin Çalışma Anlar",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+          "width": 1920,
+          "height": 1080,
+          "size": 11027730,
+          "thumbnail": "https://cdn.pixabay.com/video/2022/09/20/131993-751915314_large.jpg"
+        }
+      }
+    },
+    {
+      "id": 185096,
+      "pageURL": "https://pixabay.com/videos/id-185096/",
+      "type": "film",
+      "tags": "book, pages, literature",
+      "duration": 13,
+      "title": "Sayfaları Uçuşan Kitap",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 4146309,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/10/15/185096-874643413_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 174086,
+      "pageURL": "https://pixabay.com/videos/id-174086/",
+      "type": "animation",
+      "tags": "robot, artificial intelligence, technology",
+      "duration": 15,
+      "title": "Yapay Zeka ve Robot İnovasyonu",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 4353480,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/08/01/174086-850404739_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 183107,
+      "pageURL": "https://pixabay.com/videos/id-183107/",
+      "type": "animation",
+      "tags": "artificial intelligence, technology, robot",
+      "duration": 17,
+      "title": "Gelişmiş Robot Teknolojisi",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 5974842,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/10/01/183107-870151708_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 18399,
+      "pageURL": "https://pixabay.com/videos/id-18399/",
+      "type": "animation",
+      "tags": "silhouette, board, drawn",
+      "duration": 17,
+      "title": "Eğitim ve Tasarım İçin Silüet Çizim Animasyonu",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
+          "width": 1920,
+          "height": 1080,
+          "size": 6534754,
+          "thumbnail": "https://cdn.pixabay.com/video/2018/09/24/18399-291585366_large.jpg"
+        }
+      }
+    },
+    {
+      "id": 203986,
+      "pageURL": "https://pixabay.com/videos/id-203986/",
+      "type": "animation",
+      "tags": "artificial intelligence, technology, digital",
+      "duration": 6,
+      "title": "Yapay Zeka ve Dijital Teknoloji Animasyonu",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+          "width": 1920,
+          "height": 1080,
+          "size": 4562080,
+          "thumbnail": "https://cdn.pixabay.com/video/2024/03/12/203986-923133871_large.jpg"
+        }
+      }
+    },
+    {
+      "id": 192281,
+      "pageURL": "https://pixabay.com/videos/id-192281/",
+      "type": "film",
+      "tags": "scientist, laboratory, research",
+      "duration": 15,
+      "title": "Bilim Laboratuvarı Deneyleri",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 3708830,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/12/06/192281-892475127_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 203987,
+      "pageURL": "https://pixabay.com/videos/id-203987/",
+      "type": "animation",
+      "tags": "artificial intelligence, technology, network",
+      "duration": 5,
+      "title": "Yapay Zeka Ağları",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 1684415,
+          "thumbnail": "https://cdn.pixabay.com/video/2024/03/12/203987-923133879_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 183107,
+      "pageURL": "https://pixabay.com/videos/id-183107/",
+      "type": "animation",
+      "tags": "artificial intelligence, technology, robot",
+      "duration": 17,
+      "title": "Robot Teknolojisi ve Yapay Zeka",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 5974842,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/10/01/183107-870151708_medium.jpg"
+        }
+      }
+    }
+  ]
+}

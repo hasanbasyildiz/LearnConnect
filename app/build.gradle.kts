@@ -64,5 +64,17 @@ dependencies {
     implementation("androidx.compose.material3:material3-window-size-class:1.3.1")
     implementation("androidx.compose.material3:material3-adaptive-navigation-suite:1.4.0-alpha04")
 
+    //
+    implementation ("com.squareup.okhttp3:okhttp:4.11.0")
+
+
+    //media3
+    implementation("androidx.media3:media3-exoplayer:1.5.0")
+    implementation("androidx.media3:media3-exoplayer-dash:1.5.0")
+    implementation("androidx.media3:media3-ui:1.5.0")
+
+//Notification
+    implementation ("androidx.core:core:1.15.0")
+
 
 }
