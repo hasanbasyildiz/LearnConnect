@@ -76,5 +76,10 @@ dependencies {
 //Notification
     implementation ("androidx.core:core:1.15.0")
 
+    implementation ("com.google.code.gson:gson:2.8.9")
+
+
+    implementation ("com.github.bumptech.glide:glide:4.15.1")
+
 
 }

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_margin="8dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+        <!-- Add any data binding variables if needed -->
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:background="@color/primaryWhite"
+        android:padding="8dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/thumbnailImageView"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/rounded_corners" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Title"
+            android:textColor="@color/primaryBlack"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/thumbnailImageView"
+            app:layout_constraintStart_toStartOf="@+id/thumbnailImageView"
+            app:layout_constraintTop_toBottomOf="@+id/thumbnailImageView" />
+
+        <TextView
+            android:id="@+id/tagsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Tags"
+            android:textColor="@color/primaryBlack"
+            app:layout_constraintEnd_toEndOf="@+id/titleTextView"
+            app:layout_constraintHorizontal_bias="0.511"
+            app:layout_constraintStart_toStartOf="@+id/titleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+        <TextView
+            android:id="@+id/durationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Duration"
+            android:textColor="@color/primaryBlack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tagsTextView"
+            app:layout_constraintStart_toStartOf="@+id/tagsTextView"
+            app:layout_constraintTop_toBottomOf="@+id/tagsTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</layout>

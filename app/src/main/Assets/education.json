@@ -1,0 +1,90 @@
+{
+
+  "hits": [
+    {
+      "id": 185096,
+      "pageURL": "https://pixabay.com/videos/id-185096/",
+      "type": "film",
+      "tags": "book, pages, literature",
+      "duration": 13,
+      "title": "Sayfaları Uçuşan Kitap",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 4146309,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/10/15/185096-874643413_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 183107,
+      "pageURL": "https://pixabay.com/videos/id-183107/",
+      "type": "animation",
+      "tags": "artificial intelligence, technology, robot",
+      "duration": 17,
+      "title": "Gelişmiş Robot ve Yapay Zeka",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 5974842,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/10/01/183107-870151708_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 159049,
+      "pageURL": "https://pixabay.com/videos/id-159049/",
+      "type": "animation",
+      "tags": "brain, nervous, sci fi",
+      "duration": 20,
+      "title": "Bilim Kurgu Beyin Sinirleri",
+      "videos": {
+        "medium": {
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 7231351,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/04/15/159049-818026306_medium.jpg"
+        }
+      }
+    },
+    {
+        "id": 18399,
+             "pageURL": "https://pixabay.com/videos/id-18399/",
+             "type": "animation",
+             "tags": "silhouette, board, drawn",
+             "duration": 17,
+             "title": "Eğitim ve Tasarım İçin Silüet Çizim Animasyonu",
+             "videos": {
+               "medium": {
+                 "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
+                 "width": 1920,
+                 "height": 1080,
+                 "size": 6534754,
+                 "thumbnail": "https://cdn.pixabay.com/video/2018/09/24/18399-291585366_large.jpg"
+        }
+      }
+    },
+    {
+        "id": 131993,
+          "pageURL": "https://pixabay.com/videos/id-131993/",
+          "type": "film",
+          "tags": "to write, to study, task",
+          "duration": 23,
+          "title": "Öğrenci veya Profesyonel İçin Çalışma Anlar",
+          "videos": {
+            "medium": {
+              "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+              "width": 1920,
+              "height": 1080,
+              "size": 11027730,
+              "thumbnail": "https://cdn.pixabay.com/video/2022/09/20/131993-751915314_large.jpg"
+        }
+      }
+    }
+  ]
+}

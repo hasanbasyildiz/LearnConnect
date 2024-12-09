@@ -3,6 +3,7 @@ package com.hasanbasyildiz.learnconnect.data
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import com.hasanbasyildiz.learnconnect.Module.User
 import com.hasanbasyildiz.learnconnect.data.RegisterDataHelper.Companion.COLUMN_NAME
 import com.hasanbasyildiz.learnconnect.data.RegisterDataHelper.Companion.COLUMN_PHONE
 import com.hasanbasyildiz.learnconnect.data.RegisterDataHelper.Companion.COLUMN_SURNAME
@@ -14,7 +15,6 @@ class LoginHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, n
     companion object {
         private const val DATABASE_NAME = "learnconnect.db"
         private const val DATABASE_VERSION = 1
-
         const val TABLE_USERS = "users"
         const val COLUMN_EMAIL = "email"
         const val COLUMN_PASSWORD_HASH = "password_hash"

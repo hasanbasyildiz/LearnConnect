@@ -76,12 +76,12 @@ class LoginActivity : AppCompatActivity() {
             }
 
 
-            val intent = Intent(this, MainActivity::class.java) // Ana ekran
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            finish() // Login ekranını kapat
+            finish()
 
         } else {
-            // Hata mesajı göster
+
             Toast.makeText(this, "Geçersiz e-posta veya şifre", Toast.LENGTH_SHORT).show()
         }
     }
