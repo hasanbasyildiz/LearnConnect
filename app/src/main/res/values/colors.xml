@@ -7,7 +7,7 @@
 
 
     //renkler (colors) main color
-    <color name="primaryColor">#FFB715</color>
+    <color name="primaryColor">#0961F5</color>
     <color name="primaryBlack">#121212</color>
     <color name="secondaryBlack">#272727</color>
     <color name="tertiaryBlack">#3C3C3C</color>

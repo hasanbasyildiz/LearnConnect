@@ -2,6 +2,7 @@ package com.hasanbasyildiz.learnconnect.fragment
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -33,8 +34,11 @@ class MainPageFragment : Fragment() {
 
         // Setup RecyclerView
         val adapter = VideoAdapter(videoResponse.hits)
-        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        binding.recyclerView.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.recyclerView.adapter = adapter
+
+        loadUserData()
 
         return binding.root
     }
@@ -70,6 +74,20 @@ class MainPageFragment : Fragment() {
     }
 
 
+    private fun loadUserData() {
+        // SharedPreferences üzerinden kullanıcı bilgilerini al
+        val sharedPreferences =
+            requireActivity().getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
+
+        val name = sharedPreferences.getString("name", "Ad ")
+        val surname = sharedPreferences.getString("surname", "Soyad")
+//        val id =sharedPreferences.getString("id", "id")
+//        Log.e("kullanıcı id ", id.toString())
+
+        // Alınan bilgileri arayüzde göster
+        binding.homeHiTxt.text = "Hi $name $surname"
+
+    }
 
 
 }

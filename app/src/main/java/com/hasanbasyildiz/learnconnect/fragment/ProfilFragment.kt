@@ -40,6 +40,7 @@ class ProfilFragment : Fragment() {
         val surname = sharedPreferences.getString("surname", "Soyad")
         val email = sharedPreferences.getString("email", "Email")
         val phone = sharedPreferences.getString("phone", "Telefon Numarası")
+      //  val user_id = sharedPreferences.getInt("user_id", 12121)
 
         // Alınan bilgileri arayüzde göster
         binding.profileNameTxt.text = "$name $surname"

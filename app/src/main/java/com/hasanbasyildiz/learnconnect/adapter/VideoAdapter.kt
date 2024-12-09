@@ -1,6 +1,7 @@
 package com.hasanbasyildiz.learnconnect.adapter
 
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -43,8 +44,8 @@ class VideoAdapter(private val videoList: List<VideoItem>) :
                 intent.putExtra("course_title", video.title)
                 intent.putExtra("course_price", "$99") // Örnek fiyat
                 intent.putExtra("course_rating", "4.5") // Örnek değerlendirme
-                intent.putExtra("cours_id",video.id)
-                intent.putExtra("cours_url",video.videos.medium.url)
+                intent.putExtra("course_id",video.id)
+                intent.putExtra("course_url",video.videos.medium.url)
 
                 context.startActivity(intent)
             }

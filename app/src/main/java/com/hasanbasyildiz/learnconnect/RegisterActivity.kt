@@ -4,14 +4,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
-import com.hasanbasyildiz.learnconnect.data.RegisterDataHelper
+import com.hasanbasyildiz.learnconnect.data.DatabaseHelper
 import com.hasanbasyildiz.learnconnect.databinding.ActivityRegisterBinding
 import java.security.MessageDigest
 
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegisterBinding
-    private lateinit var databaseHelper: RegisterDataHelper
+    private lateinit var databaseHelper: DatabaseHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +20,7 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Veritabanı Yardımcısı
-        databaseHelper = RegisterDataHelper(this)
+        databaseHelper = DatabaseHelper(this)
 
         // Kayıt butonuna tıklama işlemi
         binding.registerSigninBtn.setOnClickListener {

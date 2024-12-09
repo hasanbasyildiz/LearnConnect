@@ -3,11 +3,12 @@ package com.hasanbasyildiz.learnconnect.data
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import com.hasanbasyildiz.learnconnect.data.DatabaseHelper.Companion.COLUMN_NAME
+import com.hasanbasyildiz.learnconnect.data.DatabaseHelper.Companion.COLUMN_PHONE
+import com.hasanbasyildiz.learnconnect.data.DatabaseHelper.Companion.COLUMN_SURNAME
+import com.hasanbasyildiz.learnconnect.data.DatabaseHelper.Companion.COLUMN_USER_ID
 import com.hasanbasyildiz.learnconnect.Module.User
-import com.hasanbasyildiz.learnconnect.data.RegisterDataHelper.Companion.COLUMN_NAME
-import com.hasanbasyildiz.learnconnect.data.RegisterDataHelper.Companion.COLUMN_PHONE
-import com.hasanbasyildiz.learnconnect.data.RegisterDataHelper.Companion.COLUMN_SURNAME
-import com.hasanbasyildiz.learnconnect.data.RegisterDataHelper.Companion.COLUMN_USER_ID
+
 import java.security.MessageDigest
 
 class LoginHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
@@ -69,6 +70,8 @@ class LoginHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, n
             val surname = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_SURNAME))
             val phone = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_PHONE))
             val emailFromDB = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_EMAIL))
+            // id almaya çalış
+
 
             user = User(userId, name, surname, emailFromDB, phone)
         }
