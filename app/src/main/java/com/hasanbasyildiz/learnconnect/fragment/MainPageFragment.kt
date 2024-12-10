@@ -30,7 +30,7 @@ class MainPageFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main_page, container, false)
 
         // Load JSON from assets
-        val videoResponse = loadJSONFromAsset()
+        val videoResponse = loadJSONFromAsset("all.json")
 
         // Setup RecyclerView
         val adapter = VideoAdapter(videoResponse.hits)
@@ -40,12 +40,60 @@ class MainPageFragment : Fragment() {
 
         loadUserData()
 
+        // all
+        binding.homeCategory1Txt.setOnClickListener {
+            val videoResponse = loadJSONFromAsset("all.json")
+            val adapter = VideoAdapter(videoResponse.hits)
+            binding.recyclerView.layoutManager =
+                LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            binding.recyclerView.adapter = adapter
+
+        }
+        binding.homeCategory2Txt.setOnClickListener {
+            val videoResponse = loadJSONFromAsset("computer.json")
+            val adapter = VideoAdapter(videoResponse.hits)
+            binding.recyclerView.layoutManager =
+                LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            binding.recyclerView.adapter = adapter
+
+        }
+        binding.homeCategory3Txt.setOnClickListener {
+            val videoResponse = loadJSONFromAsset("education.json")
+            val adapter = VideoAdapter(videoResponse.hits)
+            binding.recyclerView.layoutManager =
+                LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            binding.recyclerView.adapter = adapter
+
+        }
+
+        binding.homeCategory4Txt.setOnClickListener {
+            val videoResponse = loadJSONFromAsset("music.json")
+            val adapter = VideoAdapter(videoResponse.hits)
+            binding.recyclerView.layoutManager =
+                LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            binding.recyclerView.adapter = adapter
+
+        }
+        binding.homeCategory5Txt.setOnClickListener {
+            val videoResponse = loadJSONFromAsset("science.json")
+            val adapter = VideoAdapter(videoResponse.hits)
+            binding.recyclerView.layoutManager =
+                LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            binding.recyclerView.adapter = adapter
+
+        }
+
+
+
+
+
+
         return binding.root
     }
 
-    private fun loadJSONFromAsset(): VideoResponse {
+    private fun loadJSONFromAsset(fileName:String): VideoResponse {
         // JSON'u assets klasöründen oku
-        val json: String = requireContext().assets.open("computer.json").bufferedReader().use {
+        val json: String = requireContext().assets.open(fileName).bufferedReader().use {
             it.readText()
         }
 

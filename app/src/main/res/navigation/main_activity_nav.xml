@@ -22,7 +22,7 @@
         tools:layout="@layout/fragment_my_courses" />
     <fragment
         android:id="@+id/wishlistFragment"
-        android:name="com.hasanbasyildiz.learnconnect.fragment.WishlistFragment"
+        android:name="com.hasanbasyildiz.learnconnect.wishlist.WishlistFragment"
         android:label="fragment_wishlist"
         tools:layout="@layout/fragment_wishlist" />
     <fragment

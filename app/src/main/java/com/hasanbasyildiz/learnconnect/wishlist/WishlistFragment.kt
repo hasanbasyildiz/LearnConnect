@@ -1,4 +1,4 @@
-package com.hasanbasyildiz.learnconnect.fragment
+package com.hasanbasyildiz.learnconnect.wishlist
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
