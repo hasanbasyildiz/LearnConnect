@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
 import com.hasanbasyildiz.learnconnect.databinding.ActivityCourseDetailBinding
 
 class CourseDetailActivity : AppCompatActivity() {
@@ -25,35 +26,54 @@ class CourseDetailActivity : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
         val userId = sharedPreferences.getInt("user_id", 0)
 
-        val courseId = intent.getIntExtra("course_id", 0 )
+        val courseId = intent.getIntExtra("course_id", 0)
         val courseImageUrl = intent.getStringExtra("course_image_url") ?: ""
         val courseTitle = intent.getStringExtra("course_title") ?: "No Title"
         val courseUrl = intent.getStringExtra("course_url") ?: "No url"
 
-        viewModel.checkIfCourseAlreadyInserted(courseId)
+        viewModel.setCourseDetails(courseImageUrl, courseTitle)
+
+        viewModel.checkIfCourseAlreadyInserted(userId, courseId)
+
+        viewModel.courseImageUrl.observe(this, Observer { imageUrl ->
+            Glide.with(this).load(imageUrl).into(binding.detailImage)
+        })
+        viewModel.courseTitle.observe(this, Observer { title ->
+            binding.detailTitle.text = title
+        })
 
         viewModel.isAlreadyInserted.observe(this, Observer { isInserted ->
             binding.button1.isEnabled = !isInserted
         })
 
         binding.button1.setOnClickListener {
-            viewModel.insertCourseDetails(
+            viewModel.insertOrUpdateCourse(
                 userId = userId,
                 videoId = courseId,
                 imageUrl = courseImageUrl,
                 videoUrl = courseUrl,
                 courseTitle = courseTitle,
-                isLike = 0,
-                isSub = 1
+                isLike = 1
             )
+        }
+
+        binding.button2.setOnClickListener {
+            viewModel.updateIsLike(userId = userId, videoId = courseId, isLike = 1)
         }
 
         viewModel.insertResult.observe(this, Observer { success ->
             if (success) {
-                Toast.makeText(this, "Data inserted successfully!", Toast.LENGTH_SHORT).show()
-                binding.button1.isEnabled = false
+                Toast.makeText(this, "Data updated/inserted successfully!", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Error inserting data!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Error in operation!", Toast.LENGTH_SHORT).show()
+            }
+        })
+
+        viewModel.updateResult.observe(this, Observer { success ->
+            if (success) {
+                Toast.makeText(this, "isLike updated successfully!", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Error updating isLike!", Toast.LENGTH_SHORT).show()
             }
         })
     }

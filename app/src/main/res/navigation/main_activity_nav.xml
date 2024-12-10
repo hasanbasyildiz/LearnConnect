@@ -27,7 +27,7 @@
         tools:layout="@layout/fragment_wishlist" />
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.hasanbasyildiz.learnconnect.fragment.SearchFragment"
+        android:name="com.hasanbasyildiz.learnconnect.search.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" />
 </navigation>

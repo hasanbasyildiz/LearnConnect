@@ -56,9 +56,9 @@ class MainPageFragment : Fragment() {
         val videoResponse: VideoResponse = Gson().fromJson(json, VideoResponse::class.java)
 
         // Çözümlenen modelin tüm verilerini yazdır
-        println("Parsed Response: $videoResponse")
+       // println("Parsed Response: $videoResponse")
 
-        // Model elemanlarını detaylıca yazdır
+        /*// Model elemanlarını detaylıca yazdır
         videoResponse.hits.forEach { video ->
             println("---- Video Details ----")
             println("ID: ${video.id}")
@@ -68,7 +68,7 @@ class MainPageFragment : Fragment() {
             println("Video URL: ${video.videos.medium.url}")
             println("Thumbnail: ${video.videos.medium.thumbnail}")
             println("-----------------------")
-        }
+        }*/
 
         return videoResponse
     }
