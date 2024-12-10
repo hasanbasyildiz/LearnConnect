@@ -31,7 +31,7 @@ class denemeActivity2 : AppCompatActivity() {
     private var playbackPosition: Long = 0
 
     private val videoUrl =
-        "https://www.dropbox.com/scl/fi/yyxgkxtmoyyvkt9ffi7ge/COSTA-RICA-IN-4K-60fps-HDR-ULTRA-HD-1.mp4?rlkey=k7tuwdsjpix0exg4yu4hvnsac&st=bkjleey5&raw=1"
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
     private val fileName = "COSTA_RICA_VIDEO.mp4"
     private val notificationId = 1
     private val channelId = "video_download_channel"

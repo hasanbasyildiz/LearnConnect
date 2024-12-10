@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatDelegate
 import com.hasanbasyildiz.learnconnect.R
 import com.hasanbasyildiz.learnconnect.databinding.FragmentMyCoursesBinding
 import com.hasanbasyildiz.learnconnect.databinding.FragmentProfilBinding
@@ -27,10 +28,36 @@ class ProfilFragment : Fragment() {
         //  binding.toolbar.title="Profile"
 
         loadUserData()
+        setupDarkModeSwitch()
 
 
         return binding.root
     }
+
+    private fun setupDarkModeSwitch() {
+        // SharedPreferences ile dark mode durumunu kontrol et
+        val sharedPreferences = requireActivity().getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
+        val isDarkMode = sharedPreferences.getBoolean("dark_mode", false)
+
+        // Switch durumunu ayarla
+        binding.darkModeSwitch.isChecked = isDarkMode
+
+        // Switch'in durum değişikliklerini dinle
+        binding.darkModeSwitch.setOnCheckedChangeListener { _, isChecked ->
+            val editor = sharedPreferences.edit()
+            editor.putBoolean("dark_mode", isChecked)
+            editor.apply()
+
+            // Tema değişikliği
+            val nightMode = if (isChecked) {
+                AppCompatDelegate.MODE_NIGHT_YES
+            } else {
+                AppCompatDelegate.MODE_NIGHT_NO
+            }
+            AppCompatDelegate.setDefaultNightMode(nightMode)
+        }
+    }
+
 
     private fun loadUserData() {
         // SharedPreferences üzerinden kullanıcı bilgilerini al

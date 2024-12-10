@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+
     tools:context=".fragment.ProfilFragment">
 
 
@@ -12,7 +12,6 @@
         android:id="@+id/toolbar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,9 +23,9 @@
             android:id="@+id/toolbar_title"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
+            android:layout_gravity="left"
             android:text="Profile"
-            android:textColor="@color/primaryBlack"
+
             android:textSize="30sp"
             android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
@@ -36,84 +35,114 @@
         android:id="@+id/profile_cl_myAccount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="21dp"
-        android:background="@drawable/constraintlayout_background"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:padding="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints">
+            app:layout_constraintTop_toTopOf="parent">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_image"
-                android:layout_width="250dp"
-                android:layout_height="200dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp"
                 android:src="@drawable/profile_picture"
                 app:civ_border_color="@color/white"
-                app:civ_border_width="4dp" />
-
+                app:civ_border_width="3dp" />
 
             <TextView
                 android:id="@+id/profile_name_txt"
+                style="@style/edittext_Background_style"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:hint="Ad Soyad"
-                android:padding="10dp"
-                android:drawablePadding="8dp"
-                android:textColor="@color/primaryBlack"
-                android:textColorHint="@color/primaryBlack"
-                android:textSize="20sp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical"
+                android:hint="Email"
+                android:padding="12dp"
+                android:textSize="18sp"
                 android:textStyle="bold"
-                app:drawableLeftCompat="@drawable/ic_account" />
+                android:drawableStart="@drawable/ic_account"
+                android:drawablePadding="8dp" />
 
             <TextView
                 android:id="@+id/profile_phone_txt"
+                style="@style/edittext_Background_style"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:hint="Telefon Numarası"
-                android:padding="10dp"
-                android:drawablePadding="8dp"
-                android:textColor="@color/primaryBlack"
-                android:textColorHint="@color/primaryBlack"
-                android:textSize="20sp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical"
+                android:hint="Email"
+                android:padding="12dp"
+                android:textSize="18sp"
                 android:textStyle="bold"
-                app:drawableLeftCompat="@drawable/ic_phone" />
-
+                android:drawableStart="@drawable/ic_phone"
+                android:drawablePadding="8dp" />
 
             <TextView
                 android:id="@+id/profile_mail_txt"
+                style="@style/edittext_Background_style"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical"
                 android:hint="Email"
-                android:padding="10dp"
-                android:drawablePadding="8dp"
+                android:padding="12dp"
                 android:textColor="@color/primaryBlack"
-                android:textColorHint="@color/primaryBlack"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
-                app:drawableLeftCompat="@drawable/ic_email" />
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="8dp" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/edittext_Background_style"
+
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp"
+
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Karanlık mod"
+                    android:textSize="18sp"
+                    android:drawablePadding="8dp"
+
+                    android:drawableStart="@drawable/baseline_dark_mode_24"
+                    android:textColor="@color/primaryBlack"
+                     />
+
+                <Switch
+                    android:id="@+id/dark_mode_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:thumbTint="@color/primaryColor"
+                    />
+
+            </LinearLayout>
 
         </LinearLayout>
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

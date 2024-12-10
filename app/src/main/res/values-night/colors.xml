@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+
+
+
+    <!-- Dark Mode Colors -->
+    <color name="primaryColor">#2196F3</color> <!-- Canlı ve daha açık bir mavi -->
+    <color name="primaryBlack">#000000</color> <!-- Saf siyah -->
+    <color name="secondaryBlack">#181818</color> <!-- Derin koyu gri, arka planlar için -->
+    <color name="tertiaryBlack">#242424</color> <!-- Orta koyulukta gri -->
+    <color name="primaryWhite">#E0E0E0</color> <!-- Hafif kırık beyaz, metin için -->
+    <color name="secondaryWhite">#B0B0B0</color> <!-- Orta tonlu gri -->
+    <color name="tertiaryWhite">#8A8A8A</color> <!-- Daha koyu gri, düşük öncelikli metin -->
+
+
+
+
+</resources>

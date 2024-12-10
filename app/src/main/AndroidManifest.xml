@@ -12,6 +12,7 @@
     <application
         android:name=".App"
         android:allowBackup="true"
+        android:usesCleartextTraffic="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -21,16 +22,19 @@
         android:theme="@style/Theme.LearnConnect"
         tools:targetApi="31">
         <activity
+            android:name=".VideoPlayer.VideoPlayerActivity"
+            android:exported="false" />
+        <activity
             android:name=".CourseDetail.CourseDetailActivity"
             android:exported="false" />
         <activity
             android:name=".denemeActivity2"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".auth.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".auth.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

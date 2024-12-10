@@ -53,12 +53,20 @@ class CourseDetailActivity : AppCompatActivity() {
                 imageUrl = courseImageUrl,
                 videoUrl = courseUrl,
                 courseTitle = courseTitle,
-                isLike = 1
+                isLike = 1 // isLike'ı 1 olarak günceller
             )
         }
 
+// Button 2 için isSub'ı güncelle
         binding.button2.setOnClickListener {
-            viewModel.updateIsLike(userId = userId, videoId = courseId, isLike = 1)
+            viewModel.insertOrUpdateCourse(
+                userId = userId,
+                videoId = courseId,
+                imageUrl = courseImageUrl,
+                videoUrl = courseUrl,
+                courseTitle = courseTitle,
+                isSub = 1 // isSub'ı 1 olarak günceller
+            )
         }
 
         viewModel.insertResult.observe(this, Observer { success ->

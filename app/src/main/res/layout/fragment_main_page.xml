@@ -56,9 +56,8 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:padding="16dp"
+                android:background="@android:color/transparent"
                 app:layout_constraintTop_toBottomOf="@+id/home_sub_title">
-
-
                 <include layout="@layout/card_layout_homefragment" />
             </LinearLayout>
 

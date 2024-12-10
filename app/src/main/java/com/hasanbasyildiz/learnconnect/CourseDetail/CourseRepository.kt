@@ -29,12 +29,13 @@ class CourseRepository(private val context: Context) {
         val database = dbHelper.writableDatabase
         val isInserted = isCourseInserted(userId, videoId)
         return if (isInserted) {
+            // Mevcut kaydı güncelle
             val contentValues = ContentValues().apply {
+                if (isLike != null) put(DatabaseHelper.COLUMN_IS_LIKE, isLike)
+                if (isSub != null) put(DatabaseHelper.COLUMN_IS_SUB, isSub)
                 put(DatabaseHelper.COLUMN_IMAGE_URL, imageUrl)
                 put(DatabaseHelper.COLUMN_VIDEO_URL, videoUrl)
                 put(DatabaseHelper.COLUMN_COURSE_TITLE, courseTitle)
-                put(DatabaseHelper.COLUMN_IS_LIKE, isLike)
-                put(DatabaseHelper.COLUMN_IS_SUB, isSub)
             }
             database.update(
                 DatabaseHelper.TABLE_COURSE,
@@ -43,14 +44,15 @@ class CourseRepository(private val context: Context) {
                 arrayOf(userId.toString(), videoId.toString())
             ) > 0
         } else {
+            // Yeni kayıt ekle
             val contentValues = ContentValues().apply {
                 put(DatabaseHelper.COLUMN_USER_ID, userId)
                 put(DatabaseHelper.COLUMN_VIDEO_ID, videoId)
                 put(DatabaseHelper.COLUMN_IMAGE_URL, imageUrl)
                 put(DatabaseHelper.COLUMN_VIDEO_URL, videoUrl)
                 put(DatabaseHelper.COLUMN_COURSE_TITLE, courseTitle)
-                put(DatabaseHelper.COLUMN_IS_LIKE, isLike)
-                put(DatabaseHelper.COLUMN_IS_SUB, isSub)
+                if (isLike != null) put(DatabaseHelper.COLUMN_IS_LIKE, isLike)
+                if (isSub != null) put(DatabaseHelper.COLUMN_IS_SUB, isSub)
             }
             database.insert(DatabaseHelper.TABLE_COURSE, null, contentValues) != -1L
         }
