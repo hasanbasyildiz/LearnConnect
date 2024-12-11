@@ -15,10 +15,6 @@ android:layout_margin="8dp"
         app:shapeAppearanceOverlay="@style/rounded_corners"
         android:background="@drawable/rounded_corner"
         android:padding="8dp"
-
-
-
-
         >
 
         <com.google.android.material.imageview.ShapeableImageView

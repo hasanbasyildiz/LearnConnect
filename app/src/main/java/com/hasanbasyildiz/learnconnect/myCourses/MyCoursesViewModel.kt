@@ -28,7 +28,7 @@ class MyCoursesViewModel(application: Application) : AndroidViewModel(applicatio
         val userId = sharedPreferences.getInt("user_id", -1)
 
         if (userId == -1) {
-            _courses.postValue(emptyList()) // Eğer kullanıcı ID'si bulunamazsa boş liste döndür.
+            _courses.postValue(emptyList())
             return
         }
 

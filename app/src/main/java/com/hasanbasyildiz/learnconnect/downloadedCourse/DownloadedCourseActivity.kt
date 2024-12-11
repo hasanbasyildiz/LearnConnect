@@ -18,7 +18,7 @@ class DownloadedCourseActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val adapter = DownloadedCourseAdapter { course ->
-            // Kurs seçildiğinde yapılacak işlemler
+
             val intent = Intent(this, VideoPlayerActivity::class.java).apply {
                 putExtra("videoId", course.videoId)
                 putExtra("videoUrl", course.videoPath)
@@ -29,12 +29,12 @@ class DownloadedCourseActivity : AppCompatActivity() {
         }
         binding.recyclerView.adapter = adapter
 
-        // Veri gözlemleme
+
         viewModel.downloadedCourses.observe(this) { courses ->
             adapter.submitList(courses)
         }
 
-        // Verileri yükle
+
         viewModel.loadDownloadedCourses()
     }
 }

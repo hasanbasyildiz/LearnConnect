@@ -17,8 +17,8 @@ import com.hasanbasyildiz.learnconnect.denemeActivity2
 import com.hasanbasyildiz.learnconnect.downloadedCourse.DownloadedCourseActivity
 
 class LoginActivity : AppCompatActivity() {
-    lateinit var binding: ActivityLoginBinding
-    lateinit var loginHelper: LoginHelper
+   lateinit var binding: ActivityLoginBinding
+ lateinit var loginHelper: LoginHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +27,7 @@ class LoginActivity : AppCompatActivity() {
 
         loginHelper = LoginHelper(this)
 
-        // İnternet bağlantısını kontrol et
+        // internet kontrol
         if (!isInternetAvailable()) {
             showNoInternetSnackbar()
         }
@@ -44,7 +44,7 @@ class LoginActivity : AppCompatActivity() {
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 loginUser(email, password)
             } else {
-                Toast.makeText(this, "Please enter email and password", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Lütfen e-posta ve şifrenizi girin", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -93,7 +93,6 @@ class LoginActivity : AppCompatActivity() {
     private fun showNoInternetSnackbar() {
         val snackbar = Snackbar.make(binding.root, "İnternet Bağlantısı Yok İndirilen Videolar için Tıklayınız", Snackbar.LENGTH_INDEFINITE)
         snackbar.setAction("Git") {
-            // Kullanıcıyı başka bir activity'e yönlendirin
             val intent = Intent(this, DownloadedCourseActivity::class.java)
             startActivity(intent)
         }

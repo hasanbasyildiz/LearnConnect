@@ -15,21 +15,19 @@ class RegisterActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // DataBinding kullanımı
+
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Veritabanı Yardımcısı
         databaseHelper = DatabaseHelper(this)
 
-        // Kayıt butonuna tıklama işlemi
         binding.registerSigninBtn.setOnClickListener {
             handleSignup()
         }
     }
 
     private fun handleSignup() {
-        // Girdi değerlerini al
+
         val name = binding.registerName.text.toString().trim()
         val surname = binding.registerSurname.text.toString().trim()
         val email = binding.registerMail.text.toString().trim()
@@ -37,15 +35,15 @@ class RegisterActivity : AppCompatActivity() {
         val password = binding.registerPasswordEt.text.toString().trim()
         val passwordConfirm = binding.registerPasswordEtConfirm.text.toString().trim()
 
-        // Girdileri doğrula
+
         if (!validateInputs(name, surname, email, password, passwordConfirm)) {
             return
         }
 
-        // Şifreyi hashle
+
         val passwordHash = hashPassword(password)
 
-        // Veritabanına kaydet
+
         signupDatabase(name, surname, email, phone, passwordHash)
     }
 
@@ -53,7 +51,7 @@ class RegisterActivity : AppCompatActivity() {
         val isSuccess = databaseHelper.registerUser(name, surname, email, phone, passwordHash)
         if (isSuccess) {
             Toast.makeText(this, "Kayıt başarılı!", Toast.LENGTH_SHORT).show()
-            finish() // Aktiviteyi kapat
+            finish()
         } else {
             Toast.makeText(this, "Kayıt başarısız! E-posta zaten kayıtlı olabilir.", Toast.LENGTH_SHORT).show()
         }

@@ -42,14 +42,14 @@ class denemeActivity2 : AppCompatActivity() {
         binding = ActivityDeneme2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Bildirim kanalını oluştur
+
         createNotificationChannel()
 
-        // ExoPlayer kurulumu
+
         exoPlayer = ExoPlayer.Builder(this).build()
         binding.playerView.player = exoPlayer
 
-        // Videoyu oynat
+
         playVideo()
 
         if (isVideoDownloaded()) {
@@ -58,7 +58,7 @@ class denemeActivity2 : AppCompatActivity() {
             binding.buttonindirme.text = "Videoyu İndir"
         }
 
-        // İndirme butonu için tıklama dinleyicisi
+
         binding.buttonindirme.setOnClickListener {
             if (isVideoDownloaded()) {
                 deleteVideo()
@@ -149,7 +149,7 @@ class denemeActivity2 : AppCompatActivity() {
         })
 
         binding.buttonindirme.isEnabled = false
-        updateDownloadNotification(0) // İndirme başladığında bildirim başlat
+        updateDownloadNotification(0)
     }
 
     private fun updateDownloadNotification(progress: Int) {
@@ -160,7 +160,7 @@ class denemeActivity2 : AppCompatActivity() {
             .setContentText("Video indirme işlemi devam ediyor")
             .setSmallIcon(android.R.drawable.stat_sys_download)
             .setProgress(100, progress, false)
-            .setOngoing(true) // İndirme tamamlanana kadar bildirim sürekli görünsün
+            .setOngoing(true)
             .build()
 
         notificationManager.notify(notificationId, notification)

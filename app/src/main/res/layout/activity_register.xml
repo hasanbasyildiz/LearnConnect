@@ -17,6 +17,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/register_sub_title"
         style="@style/all_page_info_txt_style"
@@ -67,6 +68,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/register_surname" />
+
     <EditText
         android:id="@+id/register_tel"
         style="@style/edittext_Background_style"

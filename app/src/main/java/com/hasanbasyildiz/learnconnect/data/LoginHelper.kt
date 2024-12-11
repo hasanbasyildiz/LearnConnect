@@ -21,12 +21,12 @@ class LoginHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, n
         const val COLUMN_PASSWORD_HASH = "password_hash"
     }
 
-    // Tabloyu oluşturma işlemi gerekmez çünkü tablo zaten var
+
     override fun onCreate(db: SQLiteDatabase?) {}
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {}
 
-    // SHA-256 ile şifreyi hash'leme fonksiyonu
+
     private fun sha256(input: String): String {
         val digest = MessageDigest.getInstance("SHA-256")
         val hashBytes = digest.digest(input.toByteArray())
@@ -39,14 +39,14 @@ class LoginHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, n
         return stringBuilder.toString()
     }
 
-    // Kullanıcı giriş kontrolü
+
     fun loginUser(email: String, password: String): Boolean {
         val db = readableDatabase
 
-        // Şifreyi hash'le
+
         val hashedPassword = sha256(password)
 
-        // Hash'lenmiş şifreyi ve email'i kullanarak sorgu yap
+
         val cursor = db.rawQuery(
             "SELECT * FROM $TABLE_USERS WHERE $COLUMN_EMAIL = ? AND $COLUMN_PASSWORD_HASH = ?",
             arrayOf(email, hashedPassword)
@@ -70,7 +70,7 @@ class LoginHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, n
             val surname = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_SURNAME))
             val phone = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_PHONE))
             val emailFromDB = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_EMAIL))
-            // id almaya çalış
+
 
 
             user = User(userId, name, surname, emailFromDB, phone)

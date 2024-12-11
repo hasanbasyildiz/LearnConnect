@@ -57,7 +57,7 @@ class CourseDetailActivity : AppCompatActivity() {
             )
         }
 
-// Button 2 için isSub'ı güncelle
+
         binding.button2.setOnClickListener {
             viewModel.insertOrUpdateCourse(
                 userId = userId,

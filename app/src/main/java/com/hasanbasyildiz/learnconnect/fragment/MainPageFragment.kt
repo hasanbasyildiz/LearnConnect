@@ -29,8 +29,8 @@ class MainPageFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout using DataBinding
+    ): View {
+
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main_page, container, false)
 
         if (!isInternetAvailable()) {
@@ -38,10 +38,9 @@ class MainPageFragment : Fragment() {
         }
 
 
-        // Load JSON from assets
         val videoResponse = loadJSONFromAsset("all.json")
 
-        // Setup RecyclerView
+
         val adapter = VideoAdapter(videoResponse.hits)
         binding.recyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
@@ -49,7 +48,7 @@ class MainPageFragment : Fragment() {
 
         loadUserData()
 
-        // all
+
         binding.homeCategory1Txt.setOnClickListener {
             val videoResponse = loadJSONFromAsset("all.json")
             val adapter = VideoAdapter(videoResponse.hits)
@@ -101,7 +100,8 @@ class MainPageFragment : Fragment() {
     }
 
     private fun showNoInternetSnackbar() {
-        val snackbar = Snackbar.make(binding.root, "İnternet bağlantısı yok", Snackbar.LENGTH_INDEFINITE)
+        val snackbar =
+            Snackbar.make(binding.root, "İnternet bağlantısı yok", Snackbar.LENGTH_INDEFINITE)
         snackbar.setAction("Bağlantı Ayarları") {
             // Yönlendirilecek Activity'yi başlat
             val intent = Intent(requireContext(), DownloadedCourseActivity::class.java)
@@ -109,12 +109,15 @@ class MainPageFragment : Fragment() {
         }
         snackbar.show()
     }
+
     private fun isInternetAvailable(): Boolean {
-        val connectivityManager = requireContext().getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val connectivityManager =
+            requireContext().getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val networkInfo = connectivityManager.activeNetworkInfo
         return networkInfo != null && networkInfo.isConnected
     }
-    private fun loadJSONFromAsset(fileName:String): VideoResponse {
+
+    private fun loadJSONFromAsset(fileName: String): VideoResponse {
         // JSON'u assets klasöründen oku
         val json: String = requireContext().assets.open(fileName).bufferedReader().use {
             it.readText()
@@ -127,7 +130,7 @@ class MainPageFragment : Fragment() {
         val videoResponse: VideoResponse = Gson().fromJson(json, VideoResponse::class.java)
 
         // Çözümlenen modelin tüm verilerini yazdır
-       // println("Parsed Response: $videoResponse")
+        // println("Parsed Response: $videoResponse")
 
         /*// Model elemanlarını detaylıca yazdır
         videoResponse.hits.forEach { video ->

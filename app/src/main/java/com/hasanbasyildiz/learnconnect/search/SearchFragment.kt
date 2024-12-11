@@ -33,7 +33,7 @@ class SearchFragment : Fragment() {
     ): View {
         binding = FragmentSearchBinding.inflate(inflater, container, false)
 
-        // ViewModel oluşturma
+
         searchViewModel = ViewModelProvider(this)[SearchViewModel::class.java]
 
         setupRecyclerView()

@@ -21,7 +21,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         const val COLUMN_IS_LIKE = "is_like"
         const val COLUMN_IS_SUB = "is_sub"
 
-        // Users tablosu
+
         const val TABLE_USERS = "users"
         const val COLUMN_USER_ID_PK = "user_id" // PRIMARY KEY
         const val COLUMN_NAME = "name"
@@ -32,7 +32,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
-        // Users tablosu oluşturma
+        // Users tablosu
         val createUsersTableQuery = """
             CREATE TABLE IF NOT EXISTS $TABLE_USERS (
                 $COLUMN_USER_ID_PK INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -44,7 +44,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
             )
         """.trimIndent()
 
-        // Course tablosu oluşturma (Yabancı Anahtar ile)
+
         val createCourseTableQuery = """
             CREATE TABLE IF NOT EXISTS $TABLE_COURSE (
                 $COLUMN_USER_ID INTEGER,
@@ -65,13 +65,13 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        // Tabloları güncelle
+
         db?.execSQL("DROP TABLE IF EXISTS $TABLE_COURSE")
         db?.execSQL("DROP TABLE IF EXISTS $TABLE_USERS")
         onCreate(db)
     }
 
-    // Kullanıcı kaydı ekleme fonksiyonu
+
     fun registerUser(name: String, surname: String, email: String, phone: String?, passwordHash: String): Boolean {
         val db = writableDatabase
         val values = ContentValues().apply {

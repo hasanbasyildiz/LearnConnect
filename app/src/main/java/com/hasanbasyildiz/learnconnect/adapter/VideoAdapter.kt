@@ -28,8 +28,6 @@ class VideoAdapter(private val videoList: List<VideoItem>) :
         val video = videoList[position]
         holder.binding.apply {
             titleTextView.text = video.title
-//            tagsTextView.text = video.tags
-//            durationTextView.text = "${video.duration}s"
             Glide.with(thumbnailImageView.context)
                 .load(video.videos.medium.thumbnail)
                 .into(thumbnailImageView)
@@ -39,13 +37,12 @@ class VideoAdapter(private val videoList: List<VideoItem>) :
                 val context = it.context
                 val intent = Intent(context, CourseDetailActivity::class.java)
 
-                // Resim URL
                 intent.putExtra("course_image_url", video.videos.medium.thumbnail)
                 intent.putExtra("course_title", video.title)
-                intent.putExtra("course_price", "$99") // Örnek fiyat
-                intent.putExtra("course_rating", "4.5") // Örnek değerlendirme
-                intent.putExtra("course_id",video.id)
-                intent.putExtra("course_url",video.videos.medium.url)
+                intent.putExtra("course_price", "$99")
+                intent.putExtra("course_rating", "4.5")
+                intent.putExtra("course_id", video.id)
+                intent.putExtra("course_url", video.videos.medium.url)
 
                 context.startActivity(intent)
             }

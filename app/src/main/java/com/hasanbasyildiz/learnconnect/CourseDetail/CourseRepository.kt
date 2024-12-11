@@ -44,7 +44,7 @@ class CourseRepository(private val context: Context) {
                 arrayOf(userId.toString(), videoId.toString())
             ) > 0
         } else {
-            // Yeni kayıt ekle
+            // yeni kayıt
             val contentValues = ContentValues().apply {
                 put(DatabaseHelper.COLUMN_USER_ID, userId)
                 put(DatabaseHelper.COLUMN_VIDEO_ID, videoId)

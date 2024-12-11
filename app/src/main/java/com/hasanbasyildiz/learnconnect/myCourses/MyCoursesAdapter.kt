@@ -20,19 +20,19 @@ class MyCoursesAdapter : RecyclerView.Adapter<MyCoursesAdapter.CourseViewHolder>
         RecyclerView.ViewHolder(binding.root) {
         fun bind(course: CoursesSql) {
             binding.courseTitle.text = course.courseTitle
-            // Glide ile fotoğrafı yükleyelim
+
             Glide.with(binding.root.context)
-                .load(course.imageUrl) // Fotoğrafın URL'sini Glide ile yükleyelim
+                .load(course.imageUrl)
                 .into(binding.courseImage)
 
-            // Kursa tıklama olayı
+
             binding.root.setOnClickListener {
-                // Log ile kurs verilerini yazdıralım
+
                 Log.e("CourseClicked", "Course Title: ${course.courseTitle}, Image URL: ${course.imageUrl}")
 
-                // Veriyi başka bir activity'ye gönder
+
                 val intent = Intent(binding.root.context, VideoPlayerActivity::class.java)
-                // Tüm veriyi Intent'e ekleyelim
+
                 intent.putExtra("userId", course.userId)
                 intent.putExtra("videoId", course.videoId)
                 intent.putExtra("imageUrl", course.imageUrl)

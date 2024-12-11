@@ -1,13 +1,9 @@
 package com.hasanbasyildiz.learnconnect.VideoPlayer
 
 import android.app.Application
-import android.net.Uri
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.media3.common.MediaItem
-import androidx.media3.exoplayer.ExoPlayer
 import okhttp3.Call
 import okhttp3.Callback
 import okhttp3.OkHttpClient
@@ -28,7 +24,13 @@ class VideoPlayerViewModel(application: Application) : AndroidViewModel(applicat
     val notificationId = 1
     val channelId = "video_download_channel"
 
-    fun initializeData(userId: Int, videoId: Int, videoUrl: String, imageUrl: String, courseTitle: String) {
+    fun initializeData(
+        userId: Int,
+        videoId: Int,
+        videoUrl: String,
+        imageUrl: String,
+        courseTitle: String
+    ) {
         Log.e("infouserId", userId.toString())
         Log.e("infovideoId", videoId.toString())
         Log.e("infovideoUrl", videoUrl)
@@ -36,7 +38,12 @@ class VideoPlayerViewModel(application: Application) : AndroidViewModel(applicat
         Log.e("infocourseTitle", courseTitle)
     }
 
-    fun handleDownloadButton(videoId: Int, videoUrl: String, imageUrl: String, courseTitle: String) {
+    fun handleDownloadButton(
+        videoId: Int,
+        videoUrl: String,
+        imageUrl: String,
+        courseTitle: String
+    ) {
         if (isVideoDownloaded(videoId, courseTitle)) {
             deleteVideo(videoId, courseTitle)
         } else {
