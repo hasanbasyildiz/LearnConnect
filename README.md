@@ -4,6 +4,9 @@ LearnConnect Mobil Uygulama
 
 LearnConnect, modern bir video tabanlı eğitim platformu olarak kullanıcıların kurslara kaydolmasını, ders videolarını izlemesini ve kullanıcı deneyimini geliştiren özellikler sunmasını hedefler. Bu proje, Android platformu için Kotlin dilinde geliştirilmiştir.
 
+Dirve Link : https://drive.google.com/drive/folders/1TrKpwSeY8A52f5-d9Fvibw59kAh3aRXq
+link içinde ekran görüntüleri ve ekran kaydı bulunmaktadır.
+
 **# Uygulama Özellikleri**
 
 **## **1. Kullanıcı İşlemleri****
@@ -73,4 +76,4 @@ Videolar farklı hızlarda  oynatılabilir.
 
 LearnConnect, kullanıcı dostu bir arayüz, hızlı performans ve modern yazılım mimarisi ile Android kullanıcılarına etkili bir video tabanlı eğitim deneyimi sunar. Offline video izleme, dark moda desteği ve kişiselleştirilmiş özellikleriyle eğitim platformları arasında öne çıkar.
 
-![](C:\Users\hasan\AndroidStudioProjects\LearnConnect\ss\Screenshot_20241211_110457.png)
+
