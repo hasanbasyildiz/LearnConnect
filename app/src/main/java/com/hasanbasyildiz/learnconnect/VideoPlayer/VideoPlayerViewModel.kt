@@ -2,116 +2,152 @@ package com.hasanbasyildiz.learnconnect.VideoPlayer
 
 import android.app.Application
 import android.net.Uri
+import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.media3.common.MediaItem
 import androidx.media3.exoplayer.ExoPlayer
+import okhttp3.Call
+import okhttp3.Callback
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.Response
 import java.io.File
+import java.io.FileOutputStream
+import java.io.IOException
 
 class VideoPlayerViewModel(application: Application) : AndroidViewModel(application) {
-    private val context = getApplication<Application>().applicationContext
 
-    private val exoPlayer: ExoPlayer by lazy {
-        ExoPlayer.Builder(context).build()
+    private val context = application.applicationContext
+
+    val downloadButtonText = MutableLiveData<String>()
+    val showToastMessage = MutableLiveData<String>()
+    val downloadProgress = MutableLiveData<Int>()
+
+    val notificationId = 1
+    val channelId = "video_download_channel"
+
+    fun initializeData(userId: Int, videoId: Int, videoUrl: String, imageUrl: String, courseTitle: String) {
+        Log.e("infouserId", userId.toString())
+        Log.e("infovideoId", videoId.toString())
+        Log.e("infovideoUrl", videoUrl)
+        Log.e("infoimageUrl", imageUrl)
+        Log.e("infocourseTitle", courseTitle)
     }
 
-    private val _playbackPosition = MutableLiveData<Long>(0)
-    val playbackPosition: LiveData<Long> get() = _playbackPosition
-
-    private val _isVideoDownloaded = MutableLiveData<Boolean>(false)
-    val isVideoDownloaded: LiveData<Boolean> get() = _isVideoDownloaded
-
-    private val _downloadProgress = MutableLiveData<Int>(-1)
-    val downloadProgress: LiveData<Int> get() = _downloadProgress
-
-    private val _showToastMessage = MutableLiveData<String>()
-    val showToastMessage: LiveData<String> get() = _showToastMessage
-
-    private val _notificationVisibility = MutableLiveData<Boolean>(false)
-    val notificationVisibility: LiveData<Boolean> get() = _notificationVisibility
-
-    private val _videoPlaybackReady = MutableLiveData<Boolean>(false)
-    val videoPlaybackReady: LiveData<Boolean> get() = _videoPlaybackReady
-
-    private var videoId: Int = -1
-    private lateinit var videoUrl: String
-    private lateinit var imageUrl: String
-
-    fun initialize(userId: Int, videoId: Int, videoUrl: String, imageUrl: String, courseTitle: String) {
-        this.videoId = videoId
-        this.videoUrl = videoUrl
-        this.imageUrl = imageUrl
-        _isVideoDownloaded.value = isVideoDownloaded(videoId)
-        playVideo()
-    }
-
-    fun getPlayerInstance(): ExoPlayer = exoPlayer
-
-    fun startVideoPlayback() {
-        exoPlayer.seekTo(_playbackPosition.value ?: 0)
-        exoPlayer.play()
-    }
-
-    fun pauseVideoPlayback() {
-        _playbackPosition.value = exoPlayer.currentPosition
-        exoPlayer.pause()
-    }
-
-    fun releasePlayer() {
-        exoPlayer.release()
-    }
-
-    private fun playVideo() {
-        val mediaItem = if (isVideoDownloaded(videoId)) {
-            val localFile = File(getSharedFilePath(videoId, "video.mp4"))
-            MediaItem.fromUri(Uri.fromFile(localFile))
+    fun handleDownloadButton(videoId: Int, videoUrl: String, imageUrl: String, courseTitle: String) {
+        if (isVideoDownloaded(videoId, courseTitle)) {
+            deleteVideo(videoId, courseTitle)
         } else {
-            MediaItem.fromUri(videoUrl)
-        }
-        exoPlayer.setMediaItem(mediaItem)
-        exoPlayer.prepare()
-        _videoPlaybackReady.value = true
-    }
-
-    fun onDownloadButtonClicked() {
-        if (isVideoDownloaded(videoId)) {
-            deleteVideo()
-        } else {
-            downloadVideo()
-            downloadImage()
+            downloadVideo(videoUrl, videoId, courseTitle)
+            downloadImage(imageUrl, videoId)
         }
     }
 
-    private fun downloadVideo() {
-        // Implement video download logic (similar to the activity, but trigger LiveData updates instead of directly modifying UI)
-        _downloadProgress.value = 0
-        // Simulate download logic
+    fun setDownloadButtonText(isDownloaded: Boolean) {
+        downloadButtonText.postValue(if (isDownloaded) "Videoyu Sil" else "Videoyu İndir")
     }
 
-    private fun downloadImage() {
-        // Implement image download logic
-    }
-
-    private fun deleteVideo() {
-        val videoFile = File(getSharedFilePath(videoId, "video.mp4"))
-        val imageFile = File(getSharedFilePath(videoId, "image.jpg"))
-        if (videoFile.exists()) videoFile.delete()
-        if (imageFile.exists()) imageFile.delete()
-        _isVideoDownloaded.value = false
-        _showToastMessage.value = "Video ve görsel başarıyla silindi!"
-    }
-
-    private fun isVideoDownloaded(videoId: Int): Boolean {
-        val file = File(getSharedFilePath(videoId, "video.mp4"))
+    fun isVideoDownloaded(videoId: Int, courseTitle: String): Boolean {
+        val file = File(getSharedFilePath(videoId, "$courseTitle.mp4"))
         return file.exists()
     }
 
-    private fun getSharedFilePath(videoId: Int, fileName: String): String {
+    fun getSharedFilePath(videoId: Int, fileName: String): String {
         val sharedDir = File(context.filesDir, "shared")
         if (!sharedDir.exists()) {
             sharedDir.mkdir()
         }
         return File(sharedDir, "${videoId}_$fileName").absolutePath
     }
+
+    private fun downloadVideo(url: String, videoId: Int, courseTitle: String) {
+        val client = OkHttpClient()
+        val request = Request.Builder().url(url).build()
+
+        client.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                showToastMessage.postValue("Video indirme başarısız!")
+                downloadButtonText.postValue("Videoyu İndir")
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                if (response.isSuccessful) {
+                    val file = File(getSharedFilePath(videoId, "$courseTitle.mp4"))
+                    val fos = FileOutputStream(file)
+
+                    val buffer = ByteArray(4096)
+                    val inputStream = response.body?.byteStream()
+                    var bytesRead: Int
+                    var totalBytesRead = 0L
+                    val contentLength = response.body?.contentLength() ?: -1L
+
+                    while (inputStream?.read(buffer).also { bytesRead = it ?: -1 } != -1) {
+                        fos.write(buffer, 0, bytesRead)
+                        totalBytesRead += bytesRead
+
+                        val progress = if (contentLength > 0) {
+                            (totalBytesRead * 100 / contentLength).toInt()
+                        } else {
+                            -1
+                        }
+
+                        downloadProgress.postValue(progress)
+                    }
+
+                    fos.close()
+                    inputStream?.close()
+
+                    showToastMessage.postValue("Video başarıyla indirildi!")
+                    downloadButtonText.postValue("Videoyu Sil")
+                    downloadProgress.postValue(100) // Tamamlandı
+                }
+            }
+        })
+    }
+
+    private fun downloadImage(url: String, videoId: Int) {
+        val client = OkHttpClient()
+        val request = Request.Builder().url(url).build()
+
+        client.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                showToastMessage.postValue("Görsel indirme başarısız!")
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                if (response.isSuccessful) {
+                    val file = File(getSharedFilePath(videoId, "image.jpg"))
+                    val fos = FileOutputStream(file)
+
+                    val buffer = ByteArray(4096)
+                    val inputStream = response.body?.byteStream()
+                    var bytesRead: Int
+
+                    while (inputStream?.read(buffer).also { bytesRead = it ?: -1 } != -1) {
+                        fos.write(buffer, 0, bytesRead)
+                    }
+
+                    fos.close()
+                    inputStream?.close()
+
+                    showToastMessage.postValue("Görsel başarıyla indirildi!")
+                }
+            }
+        })
+    }
+
+    private fun deleteVideo(videoId: Int, courseTitle: String) {
+        val videoFile = File(getSharedFilePath(videoId, "$courseTitle.mp4"))
+        val imageFile = File(getSharedFilePath(videoId, "image.jpg"))
+
+        if (videoFile.exists()) videoFile.delete()
+        if (imageFile.exists()) imageFile.delete()
+
+        showToastMessage.postValue("Video ve görsel başarıyla silindi!")
+        downloadButtonText.postValue("Videoyu İndir")
+    }
 }
+
+
