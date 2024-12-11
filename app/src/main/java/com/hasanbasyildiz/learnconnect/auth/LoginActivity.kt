@@ -18,7 +18,7 @@ import com.hasanbasyildiz.learnconnect.downloadedCourse.DownloadedCourseActivity
 
 class LoginActivity : AppCompatActivity() {
     lateinit var binding: ActivityLoginBinding
-    private lateinit var loginHelper: LoginHelper
+    lateinit var loginHelper: LoginHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +28,7 @@ class LoginActivity : AppCompatActivity() {
         loginHelper = LoginHelper(this)
 
         // İnternet bağlantısını kontrol et
-        if (isInternetAvailable()) {
+        if (!isInternetAvailable()) {
             showNoInternetSnackbar()
         }
 
@@ -49,7 +49,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun loginUser(email: String, password: String) {
+    fun loginUser(email: String, password: String) {
         binding.loginProgressBar.isVisible = true
 
         val isValidUser = loginHelper.loginUser(email, password)

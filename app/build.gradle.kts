@@ -27,11 +27,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
     }
     buildFeatures{
         viewBinding =true
@@ -81,6 +81,26 @@ dependencies {
 
 
     implementation ("com.github.bumptech.glide:glide:4.15.1")
+
+
+    // JUnit 5 (Jupiter) testi için
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
+
+    // MockK, test
+    testImplementation("io.mockk:mockk:1.13.8")
+
+    // Android test core
+    testImplementation("androidx.test:core-ktx:1.6.1")
+
+    // Espresso ve Android Test Runner (Android'e özgü testler için)
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
+
+    androidTestImplementation("androidx.test.ext:junit:1.2.1")
+
+
+    testImplementation("androidx.arch.core:core-testing:2.2.0")
+
+
 
 
 }

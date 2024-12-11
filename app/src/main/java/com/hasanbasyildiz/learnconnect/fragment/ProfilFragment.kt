@@ -1,13 +1,16 @@
 package com.hasanbasyildiz.learnconnect.fragment
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDelegate
+import com.hasanbasyildiz.learnconnect.MainActivity
 import com.hasanbasyildiz.learnconnect.R
+import com.hasanbasyildiz.learnconnect.auth.LoginActivity
 import com.hasanbasyildiz.learnconnect.databinding.FragmentMyCoursesBinding
 import com.hasanbasyildiz.learnconnect.databinding.FragmentProfilBinding
 
@@ -29,6 +32,14 @@ class ProfilFragment : Fragment() {
 
         loadUserData()
         setupDarkModeSwitch()
+        binding.logoutBtn.setOnClickListener {
+            val intent = Intent(context, LoginActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            }
+            startActivity(intent)
+        }
+
+
 
 
         return binding.root
