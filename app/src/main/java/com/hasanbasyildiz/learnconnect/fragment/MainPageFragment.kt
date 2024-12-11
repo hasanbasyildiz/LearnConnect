@@ -1,6 +1,8 @@
 package com.hasanbasyildiz.learnconnect.fragment
 
 import android.content.Context
+import android.content.Intent
+import android.net.ConnectivityManager
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -9,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.snackbar.Snackbar
 import com.google.common.reflect.TypeToken
 import com.google.gson.Gson
 
@@ -16,6 +19,7 @@ import com.hasanbasyildiz.learnconnect.Module.VideoResponse
 import com.hasanbasyildiz.learnconnect.R
 import com.hasanbasyildiz.learnconnect.adapter.VideoAdapter
 import com.hasanbasyildiz.learnconnect.databinding.FragmentMainPageBinding
+import com.hasanbasyildiz.learnconnect.downloadedCourse.DownloadedCourseActivity
 
 
 class MainPageFragment : Fragment() {
@@ -28,6 +32,11 @@ class MainPageFragment : Fragment() {
     ): View? {
         // Inflate the layout using DataBinding
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main_page, container, false)
+
+        if (!isInternetAvailable()) {
+            showNoInternetSnackbar()
+        }
+
 
         // Load JSON from assets
         val videoResponse = loadJSONFromAsset("all.json")
@@ -91,6 +100,20 @@ class MainPageFragment : Fragment() {
         return binding.root
     }
 
+    private fun showNoInternetSnackbar() {
+        val snackbar = Snackbar.make(binding.root, "İnternet bağlantısı yok", Snackbar.LENGTH_INDEFINITE)
+        snackbar.setAction("Bağlantı Ayarları") {
+            // Yönlendirilecek Activity'yi başlat
+            val intent = Intent(requireContext(), DownloadedCourseActivity::class.java)
+            startActivity(intent)
+        }
+        snackbar.show()
+    }
+    private fun isInternetAvailable(): Boolean {
+        val connectivityManager = requireContext().getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val networkInfo = connectivityManager.activeNetworkInfo
+        return networkInfo != null && networkInfo.isConnected
+    }
     private fun loadJSONFromAsset(fileName:String): VideoResponse {
         // JSON'u assets klasöründen oku
         val json: String = requireContext().assets.open(fileName).bufferedReader().use {
@@ -133,7 +156,7 @@ class MainPageFragment : Fragment() {
 //        Log.e("kullanıcı id ", id.toString())
 
         // Alınan bilgileri arayüzde göster
-        binding.homeHiTxt.text = "Hi $name $surname"
+        binding.homeHiTxt.text = "Merhaba $name $surname"
 
     }
 

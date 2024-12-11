@@ -21,17 +21,7 @@ class WishlistAdapter : RecyclerView.Adapter<WishlistAdapter.WishlistViewHolder>
                 .load(item.imageUrl)
                 .into(binding.itemImage)
 
-            binding.root.setOnClickListener {
-                val intent = Intent(binding.root.context, VideoPlayerActivity::class.java)
-                intent.putExtra("userId", item.userId)
-                intent.putExtra("videoId", item.videoId)
-                intent.putExtra("imageUrl", item.imageUrl)
-                intent.putExtra("videoUrl", item.videoUrl)
-                intent.putExtra("courseTitle", item.courseTitle)
-                intent.putExtra("isLike", item.isLike)
-                intent.putExtra("isSub", item.isSub)
-                binding.root.context.startActivity(intent)
-            }
+
         }
     }
 

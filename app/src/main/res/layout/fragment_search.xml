@@ -24,9 +24,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="left"
-                android:text="Profile"
-                android:textColor="@color/primaryBlack"
-                android:textSize="30sp"
+                android:text="Kurs ara"
+                android:textSize="25sp"
                 android:textStyle="bold" />
         </androidx.appcompat.widget.Toolbar>
 
@@ -38,7 +37,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:drawableStart="@drawable/outline_search_24"
-            android:hint="Search"
+            android:hint="Ara"
             android:padding="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"

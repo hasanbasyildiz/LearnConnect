@@ -54,10 +54,11 @@
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@android:color/transparent"
                 android:orientation="vertical"
                 android:padding="16dp"
-                android:background="@android:color/transparent"
                 app:layout_constraintTop_toBottomOf="@+id/home_sub_title">
+
                 <include layout="@layout/card_layout_homefragment" />
             </LinearLayout>
 
@@ -76,20 +77,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:text="Kategoriler"
-                    android:textSize="20dp"
+                    android:textSize="23dp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/home_see_allCate_txt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:text="Tümünü gör"
-                    app:layout_constraintBottom_toBottomOf="@+id/home_category_txt"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/home_category_txt" />
 
                 <HorizontalScrollView
                     android:id="@+id/customerHorizontalScrollView"
@@ -116,50 +108,55 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
-                            android:textSize="16sp"
                             android:paddingStart="20dp"
-                            android:paddingEnd="20dp"
-                            android:text="Hepsi" />
+                            android:paddingEnd="30dp"
+                            android:text="Hepsi"
+                            android:textColor="@color/primaryColor"
+                            android:textSize="16sp" />
 
                         <TextView
                             android:id="@+id/home_category2_txt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
-                            android:textSize="16sp"
                             android:paddingStart="20dp"
-                            android:paddingEnd="20dp"
-                            android:text="computer" />
+                            android:paddingEnd="30dp"
+                            android:text="Yazılım"
+                            android:textColor="@color/primaryColor"
+                            android:textSize="16sp" />
 
                         <TextView
                             android:id="@+id/home_category3_txt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
-                            android:textSize="16sp"
                             android:paddingStart="20dp"
-                            android:paddingEnd="20dp"
-                            android:text="education" />
+                            android:paddingEnd="30dp"
+                            android:text="Eğitim"
+                            android:textColor="@color/primaryColor"
+                            android:textSize="16sp" />
 
                         <TextView
                             android:id="@+id/home_category4_txt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
-                            android:textSize="16sp"
                             android:paddingStart="20dp"
-                            android:paddingEnd="20dp"
-                            android:text="music" />
+                            android:paddingEnd="30dp"
+                            android:text="Müzik"
+                            android:textColor="@color/primaryColor"
+                            android:textSize="16sp" />
 
                         <TextView
                             android:id="@+id/home_category5_txt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
-                            android:textSize="16sp"
                             android:paddingStart="20dp"
                             android:paddingEnd="20dp"
-                            android:text="science" />
+                            android:text="Bilim"
+                            android:textColor="@color/primaryColor"
+                            android:textSize="16sp" />
                     </LinearLayout>
 
                 </HorizontalScrollView>
@@ -170,17 +167,10 @@
                 android:id="@+id/recyclerView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
-
-
-
-
-
-
-
-
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
