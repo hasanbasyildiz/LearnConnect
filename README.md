@@ -74,4 +74,3 @@ Videolar farklı hızlarda  oynatılabilir.
 LearnConnect, kullanıcı dostu bir arayüz, hızlı performans ve modern yazılım mimarisi ile Android kullanıcılarına etkili bir video tabanlı eğitim deneyimi sunar. Offline video izleme, dark moda desteği ve kişiselleştirilmiş özellikleriyle eğitim platformları arasında öne çıkar.
 
 
-![Screenshot_20241211_110457.png](..%2F..%2FDesktop%2Fvideo%20kayit%20vs%20ssler%2FScreenshot_20241211_110457.png)
