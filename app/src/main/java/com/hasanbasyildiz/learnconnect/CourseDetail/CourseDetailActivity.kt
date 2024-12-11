@@ -71,17 +71,17 @@ class CourseDetailActivity : AppCompatActivity() {
 
         viewModel.insertResult.observe(this, Observer { success ->
             if (success) {
-                Toast.makeText(this, "Data updated/inserted successfully!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Başarılı", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Error in operation!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Hata alındı", Toast.LENGTH_SHORT).show()
             }
         })
 
         viewModel.updateResult.observe(this, Observer { success ->
             if (success) {
-                Toast.makeText(this, "isLike updated successfully!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Başarılı", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Error updating isLike!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Hata alındı ", Toast.LENGTH_SHORT).show()
             }
         })
     }
